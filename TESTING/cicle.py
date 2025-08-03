@@ -5,9 +5,9 @@ from random import randint
 BASE_URL = "http://localhost:8080"
 
 def test_add_100_sellers():
-    for i in range(1, 12):
+    for i in range(1, 88):
         new_seller = {
-            "name": f"Продавец_{i}",
+            "name": f"Продавец_{i/5}",
             "surname": f"Фамилия_{i}",
             "age": randint(20, 50),
             "experience": randint(1, 10),

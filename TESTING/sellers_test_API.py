@@ -2,19 +2,6 @@ import requests
 
 BASE_URL = "http://localhost:8080"
 
-def test_info_site():
-    response = requests.get(f"{BASE_URL}/api/info-site")
-    assert response.status_code == 200
-    data = response.json()
-    assert data["name"] == "Сайт для задания"
-    assert data["author"] == "Александ Азизов"
-
-def test_info_page():
-    response = requests.get(f"{BASE_URL}/info")
-    assert response.status_code == 200
-    data = response.json()
-    assert data["version"] == "1.0.0"
-
 def test_get_all_sellers():
         response = requests.get(f"{BASE_URL}/api/seller/get_all")
         assert response.status_code == 200

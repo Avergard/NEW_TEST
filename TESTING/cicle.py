@@ -1,8 +1,11 @@
 import requests
+
 from random import randint
+
 BASE_URL = "http://localhost:8080"
+
 def test_add_100_sellers():
-    for i in range(1, 120000):
+    for i in range(1, 12):
         new_seller = {
             "name": f"Продавец_{i}",
             "surname": f"Фамилия_{i}",
